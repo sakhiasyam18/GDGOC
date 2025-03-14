@@ -1,0 +1,72 @@
+/* Gaya untuk artikel */
+article {
+    background: linear-gradient(135deg, #3a1078, #5d3fd3, #4ab5cd); /* Gradient latar belakang artikel */
+    background-size: 400% 400%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, background-color 1s ease;
+    animation: gradientMove 10s ease infinite;
+}
+
+/* Efek hover untuk artikel */
+article:hover {
+    transform: rotateY(8deg) scale(1.03); /* Mengurangi sedikit rotasi agar lebih halus */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Efek bayangan ditingkatkan */
+    background-position: 100% 50%; /* Perpindahan background lebih lembut */
+    transition: transform 0.6s ease, box-shadow 0.6s ease, background-position 0.6s ease; /* Menambahkan transisi yang lebih lambat */
+}
+
+/* Menyesuaikan keyframe untuk transisi warna yang lebih halus */
+@keyframes gradientMove {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Gaya font untuk judul artikel */
+article h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #ffffff; /* Warna teks judul artikel */
+}
+
+
+/* Gaya font untuk paragraf artikel */
+article p {
+    font-family: 'Open Sans', sans-serif; /* Font sans-serif yang bersih dan modern */
+    font-size: 1.1em;
+    line-height: 1.6;
+    transition: font-size 0.3s ease, color 0.3s ease; /* Transisi font */
+}
+
+
+/* Efek hover untuk judul artikel */
+article:hover h2 {
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: font-size 0.4s ease, font-weight 0.4s ease; /* Transisi lebih halus */
+}
+/* Efek hover untuk paragraf artikel */
+article:hover p {
+    font-size: 1.2em; 
+    color: #f0f0f0;
+    transition: font-size 0.4s ease, color 0.4s ease; /* Transisi lebih lambat */
+}
+
+/* Gaya untuk main */
+main {
+    display: flex;
+    gap: 20px; /* Jarak antara article dan aside */
+    padding-top: 20px; /* Jarak tambahan dari header */
+}
+
+/* Gaya untuk konten artikel */
+#content {
+    flex: 3; /* Mengatur lebar konten artikel */
+    padding: 20px; /* Menambahkan padding di sekitar artikel */
+}

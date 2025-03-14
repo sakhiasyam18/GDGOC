@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website Layout</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Lora:wght@400;700&family=Open+Sans:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@400;700&display=swap">
+    
+    <!-- CSS files -->
+    <link rel="stylesheet" href="Main Articlefix.css">
+    <link rel="stylesheet" href="css asidefix.css">
+    <link rel="stylesheet" href="css headerfix.css">
+    <link rel="stylesheet" href="css footerfix.css">
+    <link rel="stylesheet" href="responsive.css" media="(max-width: 768px)">
+
+</head>
+
+<body>
+    <header>
+        <h1>Website Header</h1>
+        <nav>
+            <a href="#">Home</a> | 
+            <a href="#">About</a> | 
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content">
+            <article>
+                <h2>Article 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas orci, sit amet imperdiet erat.</p>
+            </article>
+            <article>
+                <h2>Article 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas orci, sit amet imperdiet erat.</p>
+            </article>
+            <article>
+                <h2>Article 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas orci, sit amet imperdiet erat.</p>
+            </article>
+            <article>
+                <h2>Article 4</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas orci, sit amet imperdiet erat.</p>
+            </article>
+        </div>
+
+        <aside>
+            <div class="slider">
+                <div class="slider-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="slide">
+                        <img src="1.jpg" alt="Image 1">
+                        <p>Slide 1</p>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <img src="2.jpg" alt="Image 2">
+                        <p>Slide 2</p>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <img src="3.jpg" alt="Image 3">
+                        <p>Slide 3</p>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="slide">
+                        <img src="4.jpg" alt="Image 4">
+                        <p>Slide 4</p>
+                    </div>
+                    <!-- Duplikasi Slide 1 untuk efek berulang -->
+                    <div class="slide">
+                        <img src="1.jpg" alt="Image 1">
+                        <p>Slide 1</p>
+                    </div>
+                    <!-- Duplikasi Slide 2 untuk efek berulang -->
+                    <div class="slide">
+                        <img src="2.jpg" alt="Image 2">
+                        <p>Slide 2</p>
+                    </div>
+                    <!-- Duplikasi Slide 3 untuk efek berulang -->
+                    <div class="slide">
+                        <img src="3.jpg" alt="Image 3">
+                        <p>Slide 3</p>
+                    </div>
+                    <!-- Duplikasi Slide 4 untuk efek berulang -->
+                    <div class="slide">
+                        <img src="4.jpg" alt="Image 4">
+                        <p>Slide 4</p>
+                    </div>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vehicula nisi vel nisi efficitur, a varius elit commodo. Nullam facilisis magna sit amet mi suscipit, nec tempor libero varius. Praesent consectetur lacinia felis, in commodo nisl facilisis nec. Ut ut mauris id urna cursus.</p>
+        </aside>
+        
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a> |
+                    <a href="#">Terms of Service</a> |
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon"><img src="ig.png" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="fb.png" alt="Twitter"></a>
+                <a href="#" class="social-icon"><img src="telp.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliderWrapper = document.querySelector('.slider-wrapper');
+            let currentIndex = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+    
+            function showNextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                sliderWrapper.style.transform = `translateX(-${currentIndex * 100 / totalSlides}%)`;
+            }
+    
+            function showPrevSlide() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                sliderWrapper.style.transform = `translateX(-${currentIndex * 100 / totalSlides}%)`;
+            }
+    
+            setInterval(showNextSlide, 3000); // Ganti slide setiap 3 detik
+    
+            // Uncomment if you add buttons for manual control
+            // document.querySelector('.prev').addEventListener('click', showPrevSlide);
+            // document.querySelector('.next').addEventListener('click', showNextSlide);
+        });
+    </script>
+</body>
+</html>

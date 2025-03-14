@@ -1,0 +1,79 @@
+/* Gaya untuk header */
+header {
+    background-color: #3A1078; /* Warna latar belakang header yang lebih cerah */
+    padding: 30px;
+    text-align: center;
+    color: #ffffff; /* Warna teks yang konsisten */
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+    margin-bottom: 50px;
+}
+
+
+/* Gaya untuk judul di header */
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif; /* Menggunakan font modern */
+    font-weight: 700; /* Bobot tebal untuk kesan lebih kuat */
+    line-height: 1.2; /* Jarak antar baris yang proporsional */
+    transition: color 0.5s ease, transform 0.5s ease;
+}
+
+/* Gaya dasar untuk tautan navigasi di header */
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff; /* Warna teks dasar */
+    font-size: 16px; /* Ukuran font dasar */
+    font-weight: 600; /* Menjadikan font sedikit lebih tebal */
+    padding: 10px 20px; /* Padding untuk area klik yang lebih besar */
+    border-radius: 6px; /* Sudut melengkung */
+    display: inline-block; /* Agar transformasi bekerja dengan benar */
+    position: relative; /* Untuk positioning elemen garis bawah */
+    transition: color 0.3s ease, transform 0.3s ease, font-size 0.3s ease; /* Transisi halus untuk warna, ukuran, dan transformasi */
+}
+
+/* Menambahkan efek hover halus pada teks */
+header nav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #4caf50; /* Garis bawah saat hover */
+    transition: width 0.3s ease; /* Transisi halus untuk garis bawah */
+}
+
+/* Efek hover pada tautan navigasi */
+header nav a:hover {
+    color: #4caf50; /* Warna teks saat hover */
+    font-size: 18px; /* Ukuran font lebih besar saat hover */
+    transform: scale(1.1); /* Efek perbesaran saat hover */
+}
+
+
+/* Garis bawah melebar saat hover */
+header nav a:hover::before {
+    width: 100%; /* Garis bawah melebar saat hover */
+}
+
+/* Efek hover pada header */
+header:hover h1 {
+    color: #f0f0f0;
+    transform: translateY(-10px); /* Peningkatan efek hover lebih halus */
+    transition: transform 0.6s ease, color 0.6s ease; /* Transisi yang lebih lama untuk efek smooth */
+}
+/* Gaya untuk tautan navigasi aktif atau fokus */
+header nav a:focus,
+header nav a:active {
+    outline: none; /* Menghapus outline default saat fokus */
+    background-color: rgba(76, 175, 80, 1); /* Warna latar belakang tetap saat fokus */
+    transform: translateY(-5px) scale(1.05); /* Efek yang sama seperti hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Bayangan tetap saat fokus */
+    color: #fff; /* Warna teks tetap saat fokus */
+}
+

@@ -1,0 +1,66 @@
+/* Gaya untuk footer */
+footer {
+    background-color: #2c2c2c; /* Warna latar belakang footer */
+    color: #ffffff; /* Warna teks footer */
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid #4caf50; /* Garis atas footer */
+}
+
+/* Gaya untuk kontainer footer */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Jarak antara elemen dalam footer */
+    padding: 10px; /* Padding di dalam footer-container */
+}
+
+/* Gaya untuk konten footer */
+.footer-content {
+    font-family: 'Open Sans', sans-serif; /* Font yang halus dan bersih */
+    font-size: 1rem; /* Ukuran font yang seragam */
+    line-height: 1.6; /* Memberikan ruang antar baris */
+    color: #ffffff; /* Menjaga warna teks tetap kontras */
+}
+
+/* Gaya untuk link footer */
+.footer-links a {
+    color: #ffffff; /* Warna teks link */
+    text-decoration: none; /* Menghapus garis bawah pada link */
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transisi halus untuk warna dan transformasi */
+}
+
+/* Efek hover pada link footer */
+.footer-links a:hover {
+    color: #4caf50;
+    transform: scale(1.05); /* Perbesaran yang lebih kecil agar lebih subtle */
+    transition: transform 0.4s ease, color 0.4s ease; /* Transisi yang lebih halus */
+}
+
+/* Gaya untuk ikon sosial media */
+.footer-social {
+    display: flex;
+    gap: 10px; /* Jarak antar ikon sosial media */
+}
+
+/* Gaya untuk ikon sosial media */
+.footer-social a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease; /* Transisi halus untuk transformasi */
+}
+
+.footer-social a img {
+    width: 100%;
+    height: auto;
+}
+
+/* Efek hover pada ikon sosial media */
+.footer-social a:hover {
+    transform: scale(1.15); /* Perbesaran yang lebih halus */
+    transition: transform 0.5s ease; /* Transisi yang lebih smooth */
+}

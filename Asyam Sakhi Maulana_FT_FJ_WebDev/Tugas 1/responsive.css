@@ -1,0 +1,120 @@
+/* Responsif untuk perangkat dengan lebar maksimum 768px (tablet dan ponsel) */
+
+/* Gaya umum untuk header pada perangkat mobile */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 20px; /* Padding yang lebih kecil pada perangkat mobile */
+        text-align: center; /* Menyelaraskan teks ke tengah */
+        position: relative; /* Memastikan posisi relatif untuk penataan elemen di dalamnya */
+    }
+
+    /* Gaya untuk judul di header */
+    header h1 {
+        font-size: 2em; /* Ukuran font lebih kecil pada perangkat mobile */
+        margin-bottom: 10px; /* Jarak bawah yang lebih kecil */
+    }
+
+    /* Gaya untuk navigasi di header */
+    header nav {
+        display: flex; /* Mengatur navigasi menjadi fleksibel */
+        justify-content: center; /* Menyelaraskan item navigasi ke tengah */
+        gap: 15px; /* Jarak antara item navigasi */
+        flex-wrap: wrap; /* Membungkus item jika tidak ada cukup ruang */
+        margin-top: 10px; /* Jarak atas antara judul dan navigasi */
+    }
+
+    header nav a {
+        display: inline-block; /* Menampilkan link navigasi dalam baris yang sama */
+        margin: 0; /* Menghapus margin default */
+        font-size: 16px; /* Ukuran font untuk link navigasi */
+    }
+
+    /* Gaya untuk main konten */
+    main {
+        flex-direction: column; /* Menyusun artikel dan sidebar secara vertikal */
+        gap: 10px; /* Jarak antara artikel dan sidebar */
+        padding-top: 10px; /* Mengurangi jarak atas dari header */
+    }
+
+    /* Gaya untuk artikel */
+    article {
+        margin-top: -10px; /* Menarik artikel lebih dekat ke header pada perangkat mobile */
+        padding: 15px; /* Padding yang lebih kecil jika diperlukan */
+    }
+
+    /* Gaya untuk sidebar */
+    aside {
+        flex: none; /* Mengatur agar sidebar tidak lebih lebar dari konten */
+        margin-right: 0; /* Hapus margin kanan */
+    }
+
+    /* Menyusun slider untuk perangkat mobile */
+    .slider-wrapper {
+        width: 100%; /* Pastikan slider menggunakan lebar penuh */
+    }
+
+    /* Gaya untuk setiap slide */
+    .slide {
+        flex: 1 0 100%; /* Setiap slide menggunakan lebar penuh */
+        margin-right: 0; /* Hapus margin kanan */
+    }
+
+    /* Gaya umum untuk footer pada perangkat mobile */
+    footer {
+        padding: 20px; /* Padding yang lebih kecil pada perangkat mobile */
+        text-align: center; /* Menyelaraskan teks ke tengah */
+    }
+
+    /* Gaya untuk kontainer footer */
+    .footer-container {
+        flex-direction: column; /* Mengatur konten footer dalam satu kolom */
+        align-items: center; /* Menyelaraskan item ke tengah */
+    }
+
+    /* Gaya untuk link footer di perangkat mobile */
+    .footer-links {
+        margin-top: 10px; /* Jarak atas pada link */
+    }
+
+    .footer-links a {
+        display: inline-block; /* Membuat link dalam satu baris */
+        margin: 5px; /* Jarak antar link */
+        font-size: 14px; /* Ukuran font yang lebih kecil pada perangkat mobile */
+    }
+
+    /* Gaya untuk ikon sosial media */
+    .footer-social {
+        margin-top: 10px; /* Jarak atas pada ikon sosial media */
+    }
+
+    .footer-social a {
+        width: 20px; /* Lebar ikon sosial media */
+        height: 20px; /* Tinggi ikon sosial media */
+    }
+}
+
+/* Gaya untuk footer pada perangkat lebih besar, misalnya tablet dan desktop */
+@media only screen and (min-width: 769px) {
+    footer {
+        padding: 20px;
+        text-align: center; /* Teks tetap di tengah */
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: row; /* Menata elemen footer dalam satu baris */
+        align-items: center;
+        justify-content: center; /* Menyelaraskan elemen footer ke tengah */
+        gap: 20px; /* Jarak antar elemen */
+    }
+
+    .footer-links a {
+        margin: 0 10px; /* Jarak antar link di footer */
+        font-size: 14px;
+    }
+
+    .footer-social a {
+        width: 24px;
+        height: 24px;
+    }
+}

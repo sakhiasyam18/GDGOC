@@ -1,0 +1,124 @@
+/* Gaya untuk sidebar */
+aside {
+    flex: 1;
+    background-color: #f1f1f1; /* Warna latar belakang sidebar */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+/* Efek hover pada gambar di sidebar */
+aside img:hover {
+    transform: scale(1.1); /* Efek zoom in lebih smooth */
+    transition: transform 0.5s ease; /* Transisi lebih lambat dan halus */
+}
+
+/* Gaya untuk slider */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk slider-wrapper */
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%; /* Lebar slider sesuai dengan ukuran kontainer */
+}
+
+/* Gaya untuk setiap slide */
+.slide {
+    flex: 1 0 25%;
+    box-sizing: border-box;
+    background: #ddd; /* Warna latar belakang slide */
+    border-radius: 8px;
+    padding: 10px;
+    margin-right: 10px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 200px;
+}
+
+/* Menghapus margin kanan pada slide terakhir */
+.slide:last-child {
+    margin-right: 0;
+}
+
+/* Efek hover pada slide */
+.slide:hover {
+    transform: scale(1.03); /* Memperbesar slide sedikit saat hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Menambahkan bayangan untuk efek 3D */
+}
+
+/* Gaya untuk gambar dalam slide */
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+/* Gaya untuk teks dalam slide */
+.slide p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    color: #333; /* Warna teks yang sesuai dengan desain */
+}
+
+
+/* Efek hover pada teks di slide */
+.slide:hover p {
+    color: #007BFF; /* Mengubah warna teks saat hover */
+}
+
+/* Gaya untuk judul sidebar content */
+aside h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.8em; /* Sedikit memperbesar judul agar lebih menonjol */
+    line-height: 1.3; /* Mengatur jarak antar baris */
+    color: #333; /* Menjaga warna tetap lembut */
+}
+
+/* Efek hover pada konten di sidebar */
+aside a:hover {
+    transform: scale(1.05); /* Membesarkan sedikit dengan efek lembut */
+    color: #4caf50; /* Warna teks berubah saat hover */
+    transition: transform 0.4s ease, color 0.4s ease; /* Menambahkan transisi yang lebih halus */
+}
+
+/* Efek hover pada judul sidebar content */
+aside h3:hover {
+    color: #4a90e2; /* Mengubah warna judul dengan nuansa biru saat hover */
+}
+
+/* Gaya untuk teks di dalam aside */
+aside p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem; /* Menyelaraskan ukuran font untuk keterbacaan */
+    line-height: 1.8; /* Memberikan ruang yang cukup antar baris */
+    color: #555;
+}
+/* Efek hover pada teks */
+aside p:hover {
+    color: #007BFF; /* Mengubah warna teks saat hover menjadi biru lembut */
+    transform: translateY(-1px); /* Sedikit mengangkat teks saat hover */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan halus untuk efek 3D */
+}
+
+/* Animasi geseran slide */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
